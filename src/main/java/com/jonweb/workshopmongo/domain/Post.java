@@ -1,11 +1,13 @@
 package com.jonweb.workshopmongo.domain;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 import java.util.Objects;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.jonweb.workshopmongo.dto.AuthorDTO;
 
 @Document
 public class Post implements Serializable{
@@ -16,12 +18,12 @@ public class Post implements Serializable{
 	private String date;
 	private String title;
 	private String body;
-	private User author;
-	public Post(Object object, Date date2, String string, String string2, User maria) {
+	private AuthorDTO author;
+	public Post(Object object, java.util.Date date2, String string, String string2, AuthorDTO authorDTO) {
 		
 	}
 
-	public Post(String id, String date, String title, String body, User author) {
+	public Post(String id, String date, String title, String body, AuthorDTO author) {
 		super();
 		this.id = id;
 		this.date = date;
@@ -61,11 +63,11 @@ public class Post implements Serializable{
 	public void setBody(String body) {
 		this.body = body;
 	}
-	public User getAuthor() {
+	public AuthorDTO getAuthor() {
 		return author;
 	}
 
-	public void setAuthor(User author) {
+	public void setAuthor(AuthorDTO author) {
 		this.author = author;
 	}
 	
