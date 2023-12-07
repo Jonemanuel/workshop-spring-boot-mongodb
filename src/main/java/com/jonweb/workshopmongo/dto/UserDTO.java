@@ -1,10 +1,7 @@
 package com.jonweb.workshopmongo.dto;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
-import com.jonweb.workshopmongo.domain.Post;
 import com.jonweb.workshopmongo.domain.User;
 
 public class UserDTO implements Serializable {
